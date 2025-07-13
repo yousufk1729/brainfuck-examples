@@ -1,0 +1,78 @@
+Non-compressed code with explanations here. 
+Identical code to actual files but won't run properly because of commas,periods outside of square brackets. 
+
+Yes, I coded everything from scratch! I am particularly proud of my Brainfuck Code Generator. I think this is the best code I've ever written. 
+
+Brainfuck Code Generator //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+This code takes an input string and generates brainfuck code that will print out the input. Now, you can easily create a Hello, World! program. 
+Unfortunately, the code it generates is excessively verbose. 
+
+Generate [0,43,45,46,91,93] corresponding to + . [ - ]
+          ^
+Takes input char and uses it as a counter to print out +
+Then prints out .[-] to print out the ASCII value and zero out the cell. 
+Repeat w/ next char until input is finished. 
+
+++++++++++  
+
+[                      
+    > ++++            
+    > ++++ 
+    > +++++ ++++         
+    > ++++                   
+    > +++++ ++++                 
+    <<<<< -                 
+]
+
+> +++       
+> +++++ + 
+> +                 
+> +++++        
+> +++        
+<<<<<
+
+,[[>.<-]>>. >. >. > .<<<<<,]
+
+Copycat ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Copies you. 
+
+Reads input and stores into current cell. 
+Loop. Output current cell and take input for current cell.
+This continues until the user's string ends (null character has value of 0). Then, the program will stop until the next input. 
+
+,[.,]
+
+Hello, World! /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+My program is a terrible 122 bytes
+https://codegolf.stackexchange.com/a/68494 these guys found much better, interesting notes on recurrence relations also
+
+Generate [10, 0, 0, 0, 0] -> [0, 70, 100, 40, 90]
+Go through and output [72, 101, 108, 108, 111, 44, 32, 87, 111, 114, 108, 100, 33] -> "Hello, World!"
+
+++++++++++  
+
+[                      
+    > +++++++            
+    > +++++ +++++          
+    > ++++                  
+    > +++++ ++++                   
+    <<<< -                 
+]
+
+
+> ++ . H      
+> + . e                 
++++++ ++ . l            
+. l                     
++++ . o                  
+> ++++ . comma
+----- ----- -- . space
+> --- . W  
+<< . o
++++ . r
+------ . l
+----- ---. d
+> + . !
+
+XKCD Random Number Generator //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+https://xkcd.com/221/ 
